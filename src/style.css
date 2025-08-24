@@ -1,1 +1,175 @@
 @import 'tailwindcss';
+@import url(https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@theme {
+  --font-Grotesk: 'Space Grotesk', serif;
+  --font-Inter: 'Inter', serif;
+  --font-Poppins: 'Poppins', serif;
+}
+
+.typed-cursor {
+  font-weight: 800;
+  font-size: 30px;
+  color: #6366f1; /* Indigo-500 */
+  animation: blink 0.7s infinite;
+  display: inline;
+  vertical-align: baseline;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.shape {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  animation: floatUp linear infinite;
+}
+
+/* Random positions, sizes, colors */
+.shape:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  background: rgba(0, 255, 255, 0.6);
+  animation-duration: 25s;
+}
+.shape:nth-child(9) {
+  left: 10%;
+  width: 15px;
+  height: 15px;
+  background: rgba(138, 43, 226, 0.6);
+  animation-duration: 36s;
+}
+.shape:nth-child(10) {
+  left: 100%;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 191, 255, 0.6);
+  animation-duration: 44s;
+}
+.shape:nth-child(11) {
+  left: 35%;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 255, 127, 0.6);
+  animation-duration: 8s;
+}
+.shape:nth-child(12) {
+  left: 45%;
+  width: 18px;
+  height: 18px;
+  background: rgba(255, 20, 147, 0.6);
+  animation-duration: 10s;
+}
+
+/* add up to 30 shapes with variation */
+.shape:nth-child(13) {
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 255, 255, 0.6);
+  animation-duration: 50s;
+}
+.shape:nth-child(14) {
+  left: 80%;
+  width: 22px;
+  height: 22px;
+  background: rgba(147, 112, 219, 0.6);
+  animation-duration: 38s;
+}
+.shape:nth-child(1) {
+  left: 20%;
+  width: 25px;
+  height: 25px;
+  background: rgba(0, 255, 255, 0.6);
+  animation-duration: 24s;
+}
+.shape:nth-child(2) {
+  left: 30%;
+  width: 15px;
+  height: 15px;
+  background: rgba(138, 43, 226, 0.6);
+  animation-duration: 18s;
+}
+.shape:nth-child(3) {
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 191, 255, 0.6);
+  animation-duration: 22s;
+}
+.shape:nth-child(4) {
+  left: 70%;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 255, 127, 0.6);
+  animation-duration: 15s;
+}
+.shape:nth-child(5) {
+  left: 85%;
+  width: 18px;
+  height: 18px;
+  background: rgba(255, 20, 147, 0.6);
+  animation-duration: 20s;
+}
+
+/* add up to 30 shapes with variation */
+.shape:nth-child(6) {
+  left: 65%;
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 255, 255, 0.6);
+  animation-duration: 25s;
+}
+.shape:nth-child(7) {
+  left: 40%;
+  width: 22px;
+  height: 22px;
+  background: rgba(147, 112, 219, 0.6);
+  animation-duration: 19s;
+}
+/* ... keep randomizing for rest ... */
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.5) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh) scale(1.2) rotate(360deg);
+    opacity: 0;
+  }
+}
+.orbit {
+  width: 100%;
+  height: 100%;
+  animation: rotateOrbit 20s linear infinite;
+  transform-style: preserve-3d;
+}
+
+/* Rotate orbit animation */
+@keyframes rotateOrbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
