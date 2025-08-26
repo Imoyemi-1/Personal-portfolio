@@ -1,5 +1,11 @@
 import Typed from 'typed.js';
 
+const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-btn');
+const sideMenu = document.getElementById('side-menu');
+const overlay = document.getElementById('overlay');
+const links = document.querySelectorAll('#side-menu a');
+
 const options = {
   strings: [
     'I turn designs into high-quality code',
@@ -21,14 +27,31 @@ const options = {
 
 const typed = new Typed('#typed', options);
 
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.shapes');
-  for (let i = 0; i < 35; i++) {
-    const span = document.createElement('span');
-    span.style.setProperty('--x', Math.random() * 100); // random X
-    span.style.setProperty('--d', Math.random() * 5); // random duration
-    span.style.setProperty('--delay', Math.random() * 5);
-    span.style.setProperty('--s', Math.random()); // random scale
-    container.appendChild(span);
-  }
+menuBtn.addEventListener('click', () => {
+  sideMenu.classList.remove('translate-x-full');
+  sideMenu.classList.add('translate-x-0');
+  overlay.classList.remove('hidden');
+  document.body.classList.add('overflow-hidden');
+});
+
+closeBtn.addEventListener('click', () => {
+  sideMenu.classList.remove('translate-x-0');
+  sideMenu.classList.add('translate-x-full');
+  overlay.classList.add('hidden');
+  document.body.classList.remove('overflow-hidden');
+});
+
+overlay.addEventListener('click', () => {
+  sideMenu.classList.remove('translate-x-0');
+  sideMenu.classList.add('translate-x-full');
+  overlay.classList.add('hidden');
+  document.body.classList.remove('overflow-hidden');
+});
+
+links.forEach((link) => {
+  link.addEventListener('click', () => {
+    sideMenu.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  });
 });
