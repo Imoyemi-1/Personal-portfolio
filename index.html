@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -10,6 +10,16 @@
   <body
     class="w-full h-full font-Poppins overflow-x-hidden text-[lightgray] bg-black"
   >
+    <div>
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="fixed inset-0 w-full h-full object-cover z-[-1] opacity-30"
+        src="/src/videos/galaxy.mp4"
+      ></video>
+    </div>
     <header>
       <nav
         class="fixed top-0 h-[60px] left-0 w-full flex justify-between items-center px-10 py-3 z-50 bg-black/30 backdrop-blur-md shadow-sm"
@@ -21,46 +31,62 @@
           >
         </h1>
         <ul class="flex space-x-6 text-gray-200">
-          <li><a href="#home" class="hover:text-cyan-400">Home</a></li>
-          <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
-          <li><a href="#services" class="hover:text-cyan-400">Services</a></li>
-          <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+          <li>
+            <a
+              href="#home"
+              class="relative hover:text-cyan-400 group transition-all duration-300"
+              >Home
+              <span
+                class="absolute bg-gradient-to-b from-green-400 via-blue-500 to-green-600 mt-2 left-0 -bottom-1 h-0.5 w-0 transition-all duration-300 group-hover:w-1/2 group-hover:translate-x-1/2"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="relative hover:text-cyan-400 group transition-all duration-300"
+              >About
+              <span
+                class="absolute bg-gradient-to-b from-green-400 via-blue-500 to-green-600 mt-2 left-0 -bottom-1 h-0.5 w-0 transition-all duration-300 group-hover:w-1/2 group-hover:translate-x-1/2"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="relative hover:text-cyan-400 group transition-all duration-300"
+              >Skills
+              <span
+                class="absolute bg-gradient-to-b from-green-400 via-blue-500 to-green-600 mt-2 left-0 -bottom-1 h-0.5 w-0 transition-all duration-300 group-hover:w-1/2 group-hover:translate-x-1/2"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="relative hover:text-cyan-400 group transition-all duration-300"
+              >Projects
+              <span
+                class="absolute bg-gradient-to-b from-green-400 via-blue-500 to-green-600 mt-2 left-0 -bottom-1 h-0.5 w-0 transition-all duration-300 group-hover:w-1/2 group-hover:translate-x-1/2"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="relative hover:text-cyan-400 group transition-all duration-300"
+              >Contact
+              <span
+                class="absolute bg-gradient-to-b from-green-400 via-blue-500 to-green-600 mt-2 left-0 -bottom-1 h-0.5 w-0 transition-all duration-300 group-hover:w-1/2 group-hover:translate-x-1/2"
+              ></span>
+            </a>
+          </li>
         </ul>
       </nav>
       <section
         id="home"
         class="relative min-h-screen flex bg-cover bg-center bg-no-repeat pt-30"
-        style="background-image: url('/code-image-1.jpg')"
       >
-        <!-- Subtle overlay -->
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"
-        ></div>
-        <!-- Floating Shapes -->
-        <div class="absolute inset-0 overflow-hidden">
-          <!-- 30+ floating shapes -->
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <!-- duplicate as needed (20–30 times) -->
-        </div>
         <!-- Content -->
         <div class="relative z-10 px-10 space-y-4">
           <div>
@@ -95,49 +121,57 @@
             >
           </div>
         </div>
-        <div class="hero-logos relative h-[23.2rem] ml-auto mr-20">
-          <div
-            class="orbit grid grid-cols-3 place-items-center gap-x-15 gap-y-6"
-          >
-            <img
-              src="/src/images/10.png"
-              class="w-30 h-30 col-span-3"
-              alt="HTML"
-              class="tech-logo"
-            />
-            <img
-              src="/src/images/6.png"
-              class="w-30 h-30"
-              alt="CSS"
-              class="tech-logo"
-            />
-            <img
-              src="/src/images/react-logo.png"
-              class="w-20 h-20"
-              alt="CSS"
-              class="tech-logo"
-            />
-            <img
-              src="/src/images/12.png"
-              class="w-30 h-30"
-              alt="JavaScript"
-              class="tech-logo"
-            />
-            <img
-              src="/src/images/11.png"
-              class="w-30 h-30 col-span-3"
-              alt="Tailwind"
-              class="tech-logo"
-            />
-          </div>
+
+        <div
+          class="absolute -top-20 right-0 w-1/2 h-full overflow-hidden md:block hidden"
+        >
+          <video
+            class="autoBlur h-[900px] mix-blend-lighten object-cover rounded-lg shadow-2xl"
+            autoplay
+            loop
+            muted
+            plays-inline
+            src="/src/videos/hero-video.mp4"
+          ></video>
         </div>
         <div class="absolute bottom-2 left-8 text-gray-300 text-2xl space-x-2">
-          <a href=""><ion-icon name="logo-github"></ion-icon></a>
-          <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
-          <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
-          <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
-          <a href=""><ion-icon name="mail-outline"></ion-icon></a>
+          <a
+            class="transition-colors duration-300 hover:text-cyan-400"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Imoyemi-1"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-colors duration-300 hover:text-[#0A66C2]"
+            href="https://www.linkedin.com/in/ibrahim-o-6846a9276/"
+            ><ion-icon name="logo-linkedin"></ion-icon
+          ></a>
+          <a
+            class="transition-colors duration-300 hover:text-[#1DA1F2]"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/thatguyimo"
+            ><ion-icon name="logo-twitter"></ion-icon
+          ></a>
+          <a
+            class="transition-colors duration-300 hover:text-[#25D366]"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://wa.me/2348104665818"
+            ><ion-icon name="logo-whatsapp"></ion-icon
+          ></a>
+          <a
+            class="transition-colors duration-300 hover:text-[#EA4335]"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:imoyemiontop2@gmail.com"
+            ><ion-icon name="mail-outline"></ion-icon
+          ></a>
         </div>
+        <a href="#about"><div class="scroll-down"></div></a>
       </section>
     </header>
     <section
@@ -459,19 +493,375 @@
         ></div>
       </h2>
       <div
-        class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
+        class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
       >
-        <article>
-          <div>
-            <img src="" alt="" class="w-full h-40 object-cover rounded-t-lg" />
+        <article
+          class="flex flex-col space-y-4 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
+        >
+          <div class="space-y-2">
+            <img
+              src="/src/images/Smartech Store -smatech-gadgets.png"
+              alt="Smartech Store"
+              class="w-full h-50 object-contain rounded-t-lg"
+            />
+            <div class="flex justify-between items-center">
+              <div class="flex items-center space-x-2">
+                <ion-icon name="open-outline"></ion-icon>
+                <span>
+                  <a
+                    href="https://smatech-gadgets.netlify.app/"
+                    class="text-cyan-400 hover:underline"
+                    >Live Demo</a
+                  >
+                </span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <ion-icon name="logo-github"></ion-icon>
+                <span>
+                  <a
+                    href="https://github.com/Imoyemi-1/gadget-e-commerce-website.git"
+                    class="text-cyan-400 hover:underline"
+                  >
+                    Source Code
+                  </a>
+                </span>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3></h3>
-            <p></p>
+          <div class="text-left">
+            <h3 class="font-Grotesk text-2xl font-semibold">
+              Smartech E-commerce
+            </h3>
+            <p class="text-gray-300 text-sm mb-2">
+              A responsive Spa e-commerce website for gadgets built with
+              Html,Css and Tailwind CSS, featuring product listings, detailed
+              views, and a user-friendly interface.
+            </p>
+            <div class="flex flex-wrap mt-2 gap-y-2">
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >HTML</span
+              >
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >CSS</span
+              >
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+              >
+                Spa</span
+              >
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >Tailwind CSS</span
+              >
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >JavaScript
+              </span>
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >Responsive Design
+              </span>
+            </div>
+          </div>
+        </article>
+        <article
+          class="flex flex-col space-y-4 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
+        >
+          <div class="space-y-2">
+            <img
+              src="/src/images/multi-form.jpg"
+              alt="multi-form"
+              class="w-full h-50 object-contain rounded-t-lg"
+            />
+            <div class="flex justify-between items-center">
+              <div class="flex items-center space-x-2">
+                <ion-icon name="open-outline"></ion-icon>
+                <span>
+                  <a
+                    href="https://lovely-sawine-4b822a.netlify.app/"
+                    class="text-cyan-400 hover:underline"
+                    >Live Demo</a
+                  >
+                </span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <ion-icon name="logo-github"></ion-icon>
+                <span>
+                  <a
+                    href="https://github.com/Imoyemi-1/multi-step-form-app.git"
+                    class="text-cyan-400 hover:underline"
+                  >
+                    Source Code
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="text-left">
+            <h3 class="font-Grotesk text-2xl font-semibold">Multi-step Form</h3>
+            <p class="text-gray-300 text-sm mb-2">
+              Multi-step form application built with HTML, CSS, and JavaScript,
+              featuring form validation , selectable plans, pick-add-ons, cost
+              summary, and responsive design.
+            </p>
+            <div class="flex flex-wrap mt-2 gap-y-2">
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >HTML</span
+              >
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >CSS</span
+              >
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+              >
+                Spa
+              </span>
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >JavaScript
+              </span>
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >Responsive Design
+              </span>
+            </div>
+          </div>
+        </article>
+        <article
+          class="flex flex-col space-y-4 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
+        >
+          <div class="space-y-2">
+            <img
+              src="/src/images/todo-preview.jpg"
+              alt="todo list"
+              class="w-full h-50 object-contain rounded-t-lg"
+            />
+            <div class="flex justify-between items-center">
+              <div class="flex items-center space-x-2">
+                <ion-icon name="open-outline"></ion-icon>
+                <span>
+                  <a
+                    href="https://todo-list-app-111.netlify.app/"
+                    class="text-cyan-400 hover:underline"
+                    >Live Demo</a
+                  >
+                </span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <ion-icon name="logo-github"></ion-icon>
+                <span>
+                  <a
+                    href="https://github.com/Imoyemi-1/Todo-list-App.git"
+                    class="text-cyan-400 hover:underline"
+                  >
+                    Source Code
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="text-left">
+            <h3 class="font-Grotesk text-2xl font-semibold">
+              Modern Todo List App
+            </h3>
+            <p class="text-gray-300 text-sm mb-2">
+              A sleek and user-friendly todo list application built with
+              HTML,CSS and JavaScript, featuring task management, filtering,
+              dark/light mode toggle, drag-and-drop reordering, and
+              responsiveness for seamless use across devices.
+            </p>
+            <div class="flex flex-wrap mt-2 gap-y-2">
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >HTML</span
+              >
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >CSS</span
+              >
+
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >JavaScript
+              </span>
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >Sortable.js</span
+              >
+              <span
+                class="inline-block bg-cyan-400 text-black text-xs px-2 py-1 rounded-full mr-2"
+                >Responsive Design
+              </span>
+            </div>
           </div>
         </article>
       </div>
+      <div
+        class="mt-12 px-6 py-10 bg-white/5 backdrop-blur-md rounded-lg shadow-lg border border-emerald-400 max-w-3xl mx-auto"
+      >
+        <h3
+          class="font-Grotesk text-3xl font-bold bg-gradient-to-b from-green-400 via-blue-500 to-green-600 text-transparent bg-clip-text"
+        >
+          Ready to start your project?
+        </h3>
+        <p class="text-gray-300 mt-4 text-lg font-Inter">
+          let's collaborate and bring your ideas to life! Contact me today to
+          discuss your project requirements and how I can help you achieve your
+          goals.
+        </p>
+        <a
+          href="#contact"
+          class="mt-4 inline-block px-6 py-3 bg-cyan-500 text-white rounded-lg shadow-lg hover:bg-cyan-600 transition"
+          >Get in Touch
+        </a>
+      </div>
     </section>
+    <section
+      id="contact"
+      class="pt-10 px-10 pb-10 text-center bg-white/5 backdrop-blur-md"
+    >
+      <h2
+        class="font-Grotesk text-5xl font-bold bg-gradient-to-b from-green-400 via-blue-500 to-green-600 text-transparent bg-clip-text mb-1"
+      >
+        Contact Me
+        <div
+          class="w-20 h-1 bg-gradient-to-b from-green-400 via-blue-500 to-green-600 mt-2 mx-auto"
+        ></div>
+      </h2>
+      <p class="text-lg text-gray-300 font-semibold">
+        I'm excited to hear about your project! Whether you have a specific idea
+        in mind or need help brainstorming, feel free to reach out.
+      </p>
+      <form
+        action="https://formspree.io/f/mayvldwp"
+        method="POST"
+        class="mt-8 max-w-3xl mx-auto space-y-6 text-left"
+      >
+        <div class="flex gap-6">
+          <div class="flex flex-col flex-1">
+            <label for="name" class="mb-2 text-gray-300 font-semibold"
+              >Name*</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              required
+              class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-black/70 text-gray-200"
+            />
+          </div>
+
+          <div class="flex flex-col flex-1">
+            <label for="email" class="mb-2 text-gray-300 font-semibold"
+              >Email*</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="_replyto"
+              required
+              placeholder="your.email@abc.com"
+              class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-black/70 text-gray-200"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <label for="subject" class="mb-2 text-gray-300 font-semibold"
+            >Subject</label
+          >
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="What's this about?"
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-black/70 text-gray-200"
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <label for="message" class="mb-2 text-gray-300 font-semibold"
+            >Message*
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Tell me about your project..."
+            required
+            class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-black/70 text-gray-200 resize-none"
+          ></textarea>
+        </div>
+        <button
+          class="text-white px-6 py-3 rounded-lg shadow-lg hover:opacity-90 transition gap-2 text-lg w-full flex justify-center items-center bg-gradient-to-r from-green-400 via-blue-500 to-green-600 mt-10"
+        >
+          <ion-icon name="paper-plane-outline"></ion-icon>
+          Send Message
+        </button>
+      </form>
+      <div class="max-w-3xl mx-auto text-left">
+        <p class="text-gray-400 text-sm mt-6">
+          * I'll get back to you within 2-24 hours. Looking forward to
+          connecting!
+        </p>
+      </div>
+    </section>
+    <footer
+      class="flex justify-between items-center px-10 py-6 border-t border-emerald-400"
+    >
+      <p class="text-gray-400 text-sm">
+        &copy; 2025 Imoyemi Adekunle. All rights reserved.
+      </p>
+      <div class="text-gray-300 text-2xl space-x-4 hidden md:inline-flex">
+        <a
+          class="transition-colors duration-300 hover:text-cyan-400"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/Imoyemi-1"
+          ><ion-icon name="logo-github"></ion-icon
+        ></a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-colors duration-300 hover:text-[#0A66C2]"
+          href="https://www.linkedin.com/in/ibrahim-o-6846a9276/"
+          ><ion-icon name="logo-linkedin"></ion-icon
+        ></a>
+        <a
+          class="transition-colors duration-300 hover:text-[#1DA1F2]"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/thatguyimo"
+          ><ion-icon name="logo-twitter"></ion-icon
+        ></a>
+        <a
+          class="transition-colors duration-300 hover:text-[#25D366]"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://wa.me/2348104665818"
+          ><ion-icon name="logo-whatsapp"></ion-icon
+        ></a>
+        <a
+          class="transition-colors duration-300 hover:text-[#EA4335]"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="mailto:imoyemiontop2@gmail.com"
+          ><ion-icon name="mail-outline"></ion-icon
+        ></a>
+      </div>
+      <div>
+        <a href="#home"
+          ><ion-icon
+            class="text-gray-400 text-3xl hover:text-cyan-400 transition"
+            name="arrow-up-circle-outline"
+          ></ion-icon
+        ></a>
+      </div>
+    </footer>
     <script type="module" src="/src/main.js"></script>
     <script
       type="module"
