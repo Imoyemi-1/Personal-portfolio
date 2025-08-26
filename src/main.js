@@ -1,4 +1,12 @@
 import Typed from 'typed.js';
+import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+  duration: 1000, // animation duration in ms
+  once: false,
+});
 
 const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');

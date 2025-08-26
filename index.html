@@ -22,15 +22,19 @@
     </div>
     <header>
       <nav
-        class="fixed top-0 h-[60px] left-0 w-full flex justify-between items-center px-10 py-3 z-50 bg-black/30 backdrop-blur-md shadow-sm"
+        class="fixed top-0 h-[60px] left-0 w-full flex justify-between items-center px-5 md:px-10 py-3 z-50 bg-black/30 backdrop-blur-md shadow-sm"
       >
-        <h1 class="text-white text-3xl font-bold">
+        <h1
+          class="animate__animated animate__fadeInDown animate__fast text-white text-3xl font-bold"
+        >
           Imo<span
             class="bg-gradient-to-b from-green-400 via-blue-500 to-green-600 text-transparent bg-clip-text"
             >stack</span
           >
         </h1>
-        <ul class="hidden md:flex space-x-6 text-gray-200">
+        <ul
+          class="animate__animated animate__fadeInDown animate__fast hidden md:flex space-x-6 text-gray-200"
+        >
           <li>
             <a
               href="#home"
@@ -84,7 +88,10 @@
         </ul>
 
         <!-- Mobile Hamburger -->
-        <button id="menu-btn" class="block md:hidden focus:outline-none">
+        <button
+          id="menu-btn"
+          class="animate__animated animate__fadeInDown animate__fast block md:hidden focus:outline-none"
+        >
           <!-- Icon -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +112,7 @@
       <!-- Sidebar (Mobile Menu) -->
       <div
         id="side-menu"
-        class="z-50 fixed top-0 right-0 h-full w-3/4 max-w-xs bg-black/50 backdrop-blur-md transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-lg border-l border-l-gray-700 animated-slide-in"
+        class="z-50 fixed top-0 right-0 h-full w-3/4 max-w-xs bg-black/50 backdrop-blur-md transform translate-x-full transition-transform duration-500 ease md:hidden shadow-lg border-l border-l-gray-700 animated-slide-in"
       >
         <div class="p-6">
           <button id="close-btn" class="mb-6">
@@ -199,15 +206,13 @@
         class="relative min-h-screen flex bg-cover bg-center bg-no-repeat pt-30"
       >
         <!-- Content -->
-        <div class="relative z-10 px-10 space-y-4">
-          <div>
-            <p class="text-2xl md:text-3xl lg:text-4xl text-gray-300">
-              ADEKUNLE
-            </p>
-            <p class="font-Grotesk text-4xl md:text-5xl lg:text-6xl font-bold">
-              IMOYEMI
-            </p>
-            <p class="text-2xl md:text-3xl lg:text-4xl text-gray-300">
+        <div
+          class="relative z-10 md:px-10 px-5 space-y-4 animate__animated animate__fadeInLeft animate__delay-1s"
+        >
+          <div class="">
+            <p class="text-3xl lg:text-4xl text-gray-300">ADEKUNLE</p>
+            <p class="font-Grotesk text-5xl lg:text-6xl font-bold">IMOYEMI</p>
+            <p class="text-3xl lg:text-4xl text-gray-300">
               Front-end Developer
             </p>
           </div>
@@ -234,7 +239,7 @@
         </div>
 
         <div
-          class="absolute -top-20 right-0 w-1/2 h-full overflow-hidden md:block hidden"
+          class="animate__animated animate__fadeInRight animate__delay-1s absolute -top-20 right-0 w-1/2 h-full overflow-hidden md:block hidden"
         >
           <video
             class="autoBlur h-[900px] mix-blend-lighten object-cover rounded-lg shadow-2xl"
@@ -246,7 +251,7 @@
           ></video>
         </div>
         <div
-          class="absolute bottom-2 left-8 text-gray-300 text-2xl space-x-2 hidden md:block"
+          class="animate__animated animate__fadeInLeft animate__delay-1s absolute bottom-2 left-8 text-gray-300 text-2xl space-x-2 hidden md:block"
         >
           <a
             class="transition-colors duration-300 hover:text-cyan-400"
@@ -284,7 +289,11 @@
             ><ion-icon name="mail-outline"></ion-icon
           ></a>
         </div>
-        <a href="#about"><div class="scroll-down"></div></a>
+        <a href="#about"
+          ><div
+            class="scroll-down animate__animated animate__fadeInUp animate__delay-2s"
+          ></div
+        ></a>
       </section>
     </header>
     <section
@@ -299,11 +308,14 @@
           class="w-20 h-1 bg-gradient-to-b from-green-400 via-blue-500 to-green-600 mt-2 mx-auto"
         ></div>
       </h2>
-      <span class="text-lg text-gray-300 font-semibold"
+      <span class="text-lg text-gray-300 font-semibold text-center"
         >Passionate frontend developer dedicated to creating exceptional web
         experiences</span
       >
-      <article class="flex flex-col items-center max-w-5xl text-center">
+      <article
+        data-aos="fade-up"
+        class="flex flex-col items-center max-w-5xl text-center"
+      >
         <img
           class="w-60 h-60 rounded-full border-4 border-cyan-400 mb-8"
           src="/src/images/grid1.png"
@@ -326,6 +338,7 @@
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 max-w-7xl"
       >
         <article
+          data-aos="zoom-in"
           class="flex flex-col space-y-2 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
         >
           <ion-icon
@@ -338,6 +351,8 @@
           </p>
         </article>
         <article
+          data-aos="zoom-in"
+          data-aos-delay="100"
           class="flex flex-col space-y-2 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
         >
           <ion-icon
@@ -352,6 +367,8 @@
           </p>
         </article>
         <article
+          data-aos="zoom-in"
+          data-aos-delay="200"
           class="flex flex-col space-y-2 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
         >
           <ion-icon
@@ -366,6 +383,8 @@
           </p>
         </article>
         <article
+          data-aos="zoom-in"
+          data-aos-delay="300"
           class="flex flex-col space-y-2 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
         >
           <ion-icon
@@ -382,7 +401,7 @@
     </section>
     <section
       id="skills"
-      class="py-10 px-10 text-center bg-white/5 backdrop-blur-md"
+      class="skills-wrapper py-10 px-10 text-center bg-white/5 backdrop-blur-md"
     >
       <h2
         class="font-Grotesk text-5xl font-bold bg-gradient-to-b from-green-400 via-blue-500 to-green-600 text-transparent bg-clip-text mb-1"
@@ -396,7 +415,8 @@
         A comprehensive toolkit for building modern, high-performance websites
       </p>
       <div
-        class="font-Inter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 max-w-7xl mx-auto"
+        data-aos="fade-up"
+        class="skills font-Inter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 max-w-7xl mx-auto"
       >
         <article
           class="flex flex-col space-y-2 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
@@ -503,6 +523,7 @@
         </article>
       </div>
       <div
+        data-aos="fade-up"
         class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto bg-white/5 backdrop-blur-md p-6 rounded-lg shadow-lg border border-emerald-400"
       >
         <div
@@ -595,7 +616,7 @@
     </section>
     <section
       id="projects"
-      class="py-10 px-10 text-center bg-white/5 backdrop-blur-md"
+      class="projects py-10 px-10 text-center bg-white/5 backdrop-blur-md"
     >
       <h2
         class="font-Grotesk text-5xl font-bold bg-gradient-to-b from-green-400 via-blue-500 to-green-600 text-transparent bg-clip-text mb-1"
@@ -609,6 +630,7 @@
         class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
       >
         <article
+          data-aos="flip-left"
           class="flex flex-col space-y-4 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
         >
           <div class="space-y-2">
@@ -680,6 +702,8 @@
           </div>
         </article>
         <article
+          data-aos="flip-left"
+          data-aos-delay="100"
           class="flex flex-col space-y-4 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
         >
           <div class="space-y-2">
@@ -745,6 +769,8 @@
           </div>
         </article>
         <article
+          data-aos="flip-left"
+          data-aos-delay="200"
           class="flex flex-col space-y-4 border border-b-emerald-100 bg-black/70 py-6 pl-4 pr-2 backdrop-blur-md rounded-lg shadow-lg hover:scale-105 transition duration-300"
         >
           <div class="space-y-2">
@@ -814,6 +840,7 @@
         </article>
       </div>
       <div
+        data-aos="fade-up"
         class="mt-12 px-6 py-10 bg-white/5 backdrop-blur-md rounded-lg shadow-lg border border-emerald-400 max-w-3xl mx-auto"
       >
         <h3
@@ -835,7 +862,7 @@
     </section>
     <section
       id="contact"
-      class="pt-10 px-10 pb-10 text-center bg-white/5 backdrop-blur-md"
+      class="contact-form pt-10 px-10 pb-10 text-center bg-white/5 backdrop-blur-md"
     >
       <h2
         class="font-Grotesk text-5xl font-bold bg-gradient-to-b from-green-400 via-blue-500 to-green-600 text-transparent bg-clip-text mb-1"

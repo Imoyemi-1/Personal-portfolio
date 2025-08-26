@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+
 @import url(https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
@@ -96,4 +97,68 @@
     top: 90%;
     opacity: 0;
   }
+}
+
+/* ANIMATION FOR MOBILE NAVBAR */
+.animated-slide-in {
+  animation: slideIn 0.5s forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.animated-slide-out {
+  animation: slideOut 0.5s forwards;
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* STYLES FOR SKILLS SECTION */
+.skills article:hover {
+  border-color: #10b981; /* Tailwind's emerald-500 */
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); /* Emerald shadow */
+}
+.skills article ion-icon {
+  transition: transform 0.3s ease;
+}
+.skills article:hover ion-icon {
+  transform: scale(1.2);
+}
+
+/* STYLES FOR PROJECTS SECTION */
+.projects article:hover {
+  border-color: #3b82f6; /* Tailwind's blue-500 */
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); /* Blue shadow */
+}
+/* STYLES FOR CONTACT FORM */
+.contact-form input,
+.contact-form textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #6366f1; /* Tailwind's indigo-500 */
+  box-shadow: 0 0 5px rgba(99, 102, 241, 0.5); /* Indigo shadow */
+  outline: none;
+}
+.contact-form button {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #4f46e5; /* Darker indigo */
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3); /* Darker indigo shadow */
+}
+/* STYLES FOR FOOTER */
+footer a {
+  transition: color 0.3s ease;
 }
