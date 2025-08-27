@@ -14,6 +14,9 @@ const sideMenu = document.getElementById('side-menu');
 const overlay = document.getElementById('overlay');
 const links = document.querySelectorAll('#side-menu a');
 
+const form = document.querySelector('form');
+const msg = document.getElementById('successMsg');
+
 const options = {
   strings: [
     'I turn designs into high-quality code',
@@ -62,4 +65,23 @@ links.forEach((link) => {
     overlay.classList.add('hidden');
     document.body.classList.remove('overflow-hidden');
   });
+});
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: { Accept: 'application/json' },
+  });
+  if (response.ok) {
+    msg.style.display = 'block';
+    form.reset();
+    setTimeout(() => {
+      msg.style.display = 'none';
+    }, 5000);
+  } else {
+    alert('Oops! There was a problem.');
+  }
 });
